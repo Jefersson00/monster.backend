@@ -12,7 +12,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @SpringBootApplication
 @ComponentScan({"com.monster"})
 @EntityScan("com.monster.persistence.entity")
-@EnableJpaRepositories("com.monster.persistence.repository")
+@EnableJpaRepositories("com.monster.repository")
 public class Application {
 
 	private static final Logger logger = LoggerFactory.getLogger(Application.class);
