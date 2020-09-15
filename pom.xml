@@ -12,12 +12,13 @@
 	<groupId>proxima.project</groupId>
 	<artifactId>monster.backend</artifactId>
 	<version>0.0.1</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<name>monster.backend</name>
 	<description>backend  Monster project  for Spring Boot </description>
 
 	<properties>
 		<java.version>11</java.version>
+		<package.file.name>monster.backend</package.file.name>
 	</properties>
 
 	<dependencies>
@@ -25,7 +26,7 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
@@ -37,24 +38,26 @@
 			<scope>runtime</scope>
 			<optional>true</optional>
 		</dependency>
-		
-		
-		
+
+
+
+		<!-- dependency> <groupId>proxima.project</groupId> <artifactId>monster.persistence</artifactId> 
+			<version>0.0.2</version> </dependency -->
+			
 		<dependency>
 			<groupId>proxima.project</groupId>
 			<artifactId>monster.persistence</artifactId>
 			<version>0.0.2</version>
+			<classifier>app-to-import</classifier>
 		</dependency>
-		
-		
-		
-		
+
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-tomcat</artifactId>
 			<scope>provided</scope>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
