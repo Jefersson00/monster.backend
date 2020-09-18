@@ -5,6 +5,7 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.SpringApplication;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -34,7 +35,7 @@ public class AziendaController {
 	
 	
 	@GetMapping("/")
-	public ResponseEntity<List<Azienda>> getRoles() {
+	public ResponseEntity<List<Azienda>> getAziendas() {
 		List<Azienda> aziendaList = aziendaService.getAll();
 		
 		if (aziendaList.isEmpty()) {
@@ -47,9 +48,10 @@ public class AziendaController {
 	
 	
 	@PostMapping(value = "/", consumes = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<Azienda> createRole(
-			@Validated @RequestBody final Azienda azienda) {
+	public ResponseEntity<Azienda> createAzienda(@RequestBody final Azienda azienda) {
 		logger.info("Creating azienda : {}", azienda);
+		
+		
 //		if(false) {
 ////			controllo dei parametri unici per evitare. 
 ////			controllare se esiste gia un elemento con lo stesso campo
