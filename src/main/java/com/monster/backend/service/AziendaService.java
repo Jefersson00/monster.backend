@@ -1,39 +1,29 @@
 package com.monster.backend.service;
 
-import java.util.List;
+import java.util.Date;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.monster.backend.dto.AnnuncioDTO;
+import com.monster.backend.dto.AziendaDTO;
+import com.monster.persistence.entity.Annuncio;
 import com.monster.persistence.entity.Azienda;
+import com.monster.repository.AnnuncioRepository;
 import com.monster.repository.AziendaRepository;
 
-@Service 
-public class AziendaService {
+@Service
+public class AziendaService extends AbstractService<Azienda, AziendaDTO> {
 	
-	
-	public static final Logger logger = LoggerFactory.getLogger(AziendaService.class);
-
-	
-	@Autowired
-	private AziendaRepository aziendaRepository;
-	
-	
-	public Azienda insert (Azienda azienda) {
-		logger.info("insert() - START - with given azienda {}", azienda);
-		return aziendaRepository.save(azienda);
+	public AziendaDTO findByNome(String nome) {
+		return converter.toDTO(((AziendaRepository)repository).findByNome(nome));
 	}
 	
-	
-	public List<Azienda> getAll () {
-		logger.info("AziendaService.getAll - START");
-		return aziendaRepository.findAll();
-		
+	public AziendaDTO findByEmail(String email) {
+		return converter.toDTO(((AziendaRepository)repository).findByEmail(email));
 	}
 	
-	
-	
+	public AziendaDTO findByEmailAndPassword(String email, String password) {
+		return converter.toDTO(((AziendaRepository)repository).findByEmailAndPassword(email,password));
+	}
 	
 }

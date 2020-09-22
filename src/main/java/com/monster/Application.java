@@ -12,8 +12,8 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
-@SpringBootApplication
-@ComponentScan({"com.monster"})
+@SpringBootApplication(scanBasePackages = { "com.monster.backend"})
+@ComponentScan({ "com.monster" })
 @EntityScan("com.monster.persistence.entity")
 @EnableJpaRepositories("com.monster.repository")
 public class Application extends SpringBootServletInitializer {
@@ -25,11 +25,11 @@ public class Application extends SpringBootServletInitializer {
 		ApplicationContext applicationContext = SpringApplication.run(Application.class, args);
 		logger.info("APPLICATION STARTED!!!");
 	}
+
 	public static void printProperties(Properties prop) {
-		for (Object key: prop.keySet()) {
+		for (Object key : prop.keySet()) {
 			logger.trace("PROPERTY: " + key + ": " + prop.getProperty(key.toString()));
 		}
 	}
-	
 
 }
