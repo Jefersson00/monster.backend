@@ -12,7 +12,7 @@
 	<groupId>proxima.project</groupId>
 	<artifactId>monster.backend</artifactId>
 	<version>0.0.1</version>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 	<name>monster.backend</name>
 	<description>backend  Monster project  for Spring Boot </description>
 
