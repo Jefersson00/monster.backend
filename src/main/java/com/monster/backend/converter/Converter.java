@@ -3,7 +3,11 @@ package com.monster.backend.converter;
 import java.util.List;
 
 import org.mapstruct.Mapper;
-
+/***
+ * 
+ * @author jefersson : jeferssonserrano00@gmail.com
+ *
+ */
 public interface Converter<Entity,DTO> {
 
 	public Entity toEntity(DTO dto);

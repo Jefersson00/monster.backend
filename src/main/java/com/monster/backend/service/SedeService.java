@@ -12,7 +12,11 @@ import com.monster.persistence.entity.Azienda;
 import com.monster.persistence.entity.Sede;
 import com.monster.repository.AnnuncioRepository;
 import com.monster.repository.AziendaRepository;
-
+/***
+ * 
+ * @author jefersson : jeferssonserrano00@gmail.com
+ *
+ */
 @Service
 public class SedeService extends AbstractService<Sede, SedeDTO> {
 	

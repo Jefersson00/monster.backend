@@ -20,7 +20,11 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-
+/***
+ * 
+ * @author jefersson : jeferssonserrano00@gmail.com
+ *
+ */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -31,7 +35,7 @@ public class UtentePercorsoDTO {
 	
 	private Long id;
 	
-	private PercorsoFormativo percorsoFormativo;
+	private Long percorsoFormativo;
 	
-	private Utente utente;
+	private Long utente;
 }

@@ -7,7 +7,11 @@ import org.springframework.stereotype.Service;
 import com.monster.backend.dto.AnnuncioDTO;
 import com.monster.persistence.entity.Annuncio;
 import com.monster.repository.AnnuncioRepository;
-
+/***
+ * 
+ * @author jefersson : jeferssonserrano00@gmail.com
+ *
+ */
 @Service
 public class AnnuncioService extends AbstractService<Annuncio, AnnuncioDTO> {
 	

@@ -1,5 +1,9 @@
 package com.monster.backend.service;
-
+/***
+ * 
+ * @author jefersson : jeferssonserrano00@gmail.com
+ *
+ */
 public interface ServiceDTO<DTO> {
 	
 	public Iterable<DTO> getAll();

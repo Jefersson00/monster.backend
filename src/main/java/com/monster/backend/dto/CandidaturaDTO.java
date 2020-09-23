@@ -14,7 +14,11 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-
+/***
+ * 
+ * @author jefersson : jeferssonserrano00@gmail.com
+ *
+ */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -23,7 +27,7 @@ public class CandidaturaDTO {
 	
 	private Long id;
 	
-	private Annuncio annuncio;
+	private Long annuncio;
 	
-	private Utente utente;
+	private Long utente;
 }

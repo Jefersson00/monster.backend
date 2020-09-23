@@ -7,7 +7,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.monster.backend.dto.AziendaDTO;
 import com.monster.backend.service.AziendaService;
-
+/***
+ * 
+ * @author jefersson : jeferssonserrano00@gmail.com
+ *
+ */
 @RestController
 @RequestMapping("/azienda")
 @CrossOrigin(origins = "http://localhost:4200")

@@ -6,7 +6,11 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.monster.backend.converter.Converter;
 
-
+/***
+ * 
+ * @author jefersson : jeferssonserrano00@gmail.com
+ *
+ */
 public abstract class AbstractService<Entity,DTO> implements ServiceDTO<DTO> {
 	
 	@Autowired
@@ -19,7 +23,6 @@ public abstract class AbstractService<Entity,DTO> implements ServiceDTO<DTO> {
 	
 	@Override
 	public DTO getById(long id) {
-		System.out.println(converter.toString());
 		return converter.toDTO(repository.findById(id).get());
 	}
 	

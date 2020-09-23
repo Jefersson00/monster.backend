@@ -10,7 +10,11 @@ import com.monster.persistence.entity.Annuncio;
 import com.monster.persistence.entity.Azienda;
 import com.monster.repository.AnnuncioRepository;
 import com.monster.repository.AziendaRepository;
-
+/***
+ * 
+ * @author jefersson : jeferssonserrano00@gmail.com
+ *
+ */
 @Service
 public class AziendaService extends AbstractService<Azienda, AziendaDTO> {
 	

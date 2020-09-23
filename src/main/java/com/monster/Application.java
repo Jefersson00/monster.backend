@@ -11,7 +11,11 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
-
+/***
+ * 
+ * @author jefersson : jeferssonserrano00@gmail.com
+ *
+ */
 @SpringBootApplication(scanBasePackages = { "com.monster.backend"})
 @ComponentScan({ "com.monster" })
 @EntityScan("com.monster.persistence.entity")

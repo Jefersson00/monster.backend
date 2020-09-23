@@ -2,7 +2,11 @@ package com.monster.backend.converter;
 
 import java.util.ArrayList;
 import java.util.List;
-
+/***
+ * 
+ * @author jefersson : jeferssonserrano00@gmail.com
+ *
+ */
 public abstract class AbstractConverter<Entity, DTO> implements Converter<Entity, DTO> {
 
 	public List<Entity> toEntityList(Iterable<DTO> listDTO) {

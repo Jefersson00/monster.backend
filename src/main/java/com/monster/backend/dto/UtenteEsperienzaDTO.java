@@ -17,7 +17,11 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-
+/***
+ * 
+ * @author jefersson : jeferssonserrano00@gmail.com
+ *
+ */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -30,7 +34,7 @@ public class UtenteEsperienzaDTO {
 	
 	private Date dataInizio;
 	
-	private Esperienza esperienza;
+	private Long esperienza;
 	
-	private Utente utente;
+	private Long utente;
 }

@@ -9,7 +9,11 @@ import com.monster.backend.service.AziendaService;
 import com.monster.persistence.entity.Sede;
 import com.monster.repository.AziendaRepository;
 
-
+/***
+ * 
+ * @author jefersson : jeferssonserrano00@gmail.com
+ *
+ */
 @Component
 public class SedeConverter extends AbstractConverter<Sede,SedeDTO> {
 	
@@ -21,7 +25,13 @@ public class SedeConverter extends AbstractConverter<Sede,SedeDTO> {
 	public Sede toEntity(SedeDTO sedeDTO) {
 		Sede sede= null;
 		if (sedeDTO != null) {
-			sede= new Sede(sedeDTO.getId(),sedeDTO.getCitta(),sedeDTO.getRegione(),null,aziendaRepository.findById(sedeDTO.getAzienda()).get());			
+			sede= new Sede(
+					sedeDTO.getId()==null?-1:sedeDTO.getId(),
+					sedeDTO.getCitta(),
+					sedeDTO.getRegione(),
+					null,
+					aziendaRepository.findById(sedeDTO.getAzienda()).get()
+					);			
 		}
 		return sede;
 	}
@@ -30,7 +40,14 @@ public class SedeConverter extends AbstractConverter<Sede,SedeDTO> {
 	public SedeDTO toDTO(Sede sede) {
 		SedeDTO sedeDTO = null;
 		if (sede != null) {
-			sedeDTO= new SedeDTO(sede.getId(),sede.getCitta(),sede.getRegione(),sede.getAzienda().getId());			
+			
+			sedeDTO= new SedeDTO(
+					sede.getId(),
+					sede.getCitta(),
+					sede.getRegione(),
+					sede.getAzienda().getId()
+					);	
+			
 		}
 		return sedeDTO;
 	}
