@@ -3,6 +3,7 @@ package com.monster.backend.dto;
 
 import java.util.Date;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import com.monster.persistence.entity.Annuncio;
@@ -32,6 +33,7 @@ public class UtenteDTO {
 	
 	private String cv;
 	
+	@JsonFormat(pattern="yyyy-MM-dd")
 	private Date dataNascita;
 	
 	private String email;

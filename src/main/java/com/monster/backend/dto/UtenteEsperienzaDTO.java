@@ -3,6 +3,7 @@ package com.monster.backend.dto;
 
 import java.util.Date;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import com.monster.persistence.entity.Annuncio;
@@ -30,8 +31,10 @@ public class UtenteEsperienzaDTO {
 	
 	private Long id;
 	
+	@JsonFormat(pattern="yyyy-MM-dd")
 	private Date dataFine;
 	
+	@JsonFormat(pattern="yyyy-MM-dd")
 	private Date dataInizio;
 	
 	private Long esperienza;
