@@ -25,4 +25,10 @@ public class AnnuncioService extends AbstractService<Annuncio, AnnuncioDTO> {
 	}
 	
 	
+	public  Iterable<AnnuncioDTO>  findByDescrizioneContaining(String keyword) {
+		return converter.toDTOList(((AnnuncioRepository)repository).findByDescrizioneContaining(keyword));
+	}
+	
+	
+	
 }
